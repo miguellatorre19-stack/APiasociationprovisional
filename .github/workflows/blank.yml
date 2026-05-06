@@ -18,7 +18,7 @@ jobs:
           java-version: '21'
       - run: mvn package -DskipTests
       - run: docker build -t asociation-api:latest .
-      - run: docker-compose up -d
+      - run: docker compose up -d
       - run: npm install -g newman
       # - name: Install Postman CLI
       #   run: 
