@@ -25,6 +25,8 @@ jobs:
           PROD_DB_USER: user
           PROD_DB_PASSWORD: password
           PROD_DB_ROOT_PASSWORD: password
+      - name: Wait for API
+        run: sleep 30
       - run: npm install -g newman
       # - name: Install Postman CLI
       #   run: 
