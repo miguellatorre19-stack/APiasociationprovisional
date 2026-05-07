@@ -36,6 +36,10 @@ services:
       PROD_DB_NAME: ${PROD_DB_NAME:?missing}
       PROD_DB_USER: ${PROD_DB_USER:?missing}
       PROD_DB_PASSWORD: ${PROD_DB_PASSWORD:?missing}
+      SPRING_DATASOURCE_URL: jdbc:mariadb://db:3306/${PROD_DB_NAME:?missing}?createDatabaseIfNotExist=true
+      SPRING_DATASOURCE_USERNAME: ${PROD_DB_USER:?missing}
+      SPRING_DATASOURCE_PASSWORD: ${PROD_DB_PASSWORD:?missing}
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.mariadb.jdbc.Driver
     networks:
       - app_net
 
